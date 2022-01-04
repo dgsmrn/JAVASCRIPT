@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Variáveis e tipos de dados
+        
+        //Declaração or declaration
+        var name
+
+        //Assignment or atribuição de valores
+        name = "Mike"
+
+        // que tipo de dado foi colocado na variável
+        console.log(typeof name) // string
+        
+        //agrupamento de declarações
+        let age, isHuman
+        age = 18 //number
+        isHuman = true //boolean
+
+        //multiplos argumentos na função
+        console.log(name, age, isHuman)
+        
+        //escrita de texto + variáveis / concatenando os valores
+        console.log('O ' + name + ' tem ' + age + ' anos.')
+
+        // interpolando valores com template literals or template strings (craze)
+        console.log(`o ${name} tem ${age} anos.`)
+
+        // object
+
+        const person = {
+            name:'John',
+            age: 30,
+            weight: 88.6,
+            isAdmin: true
+        }
+
+        console.log(person.name)
+        console.log(`${person.name} tem ${person.age} anos`)
+
+        // Array
+        
+        const animals = [
+            'Lion',
+            'Monkey',
+            'Cat',
+            {
+                name:'cat',
+                age:3
+            }
+        ]
+
+        // acessar valores
+        console.log(animals)
+
+        //acessar primeira opção
+        console.log(animals[0])
+
+        //ver o total de itens do array
+        console.log(animals.length)
+
+        //acessar um objeto dentro do array
+        console.log(animals[3].name)
+
+        //EXERCICIOS
+
+        // 1. Declare uma variável de nome weight
+        let weight
+
+        // 2. Que tipo de dado é a variável acima?
+        console.log(typeof weight)
+
+        /* 3. Declare uma variáve e atribua valores para cada um dos dados:
+
+            * name:string
+            * age: Number (integer)
+            * stars: Number (Float)
+            * isSubscribed: Boolean
+        */
+
+        let Exname = "Mayk"
+        let Exage = 34
+        let Exstars = 6.5
+        let ExisSubscribed = true
+
+        /* 4. A variável student abaixo é de que tipo de dado?
+
+            4.1 Atribua a ela as mesmas propriedades e valores do exercício 3.
+            4.2 Mostre no console a seguente mensagem:
+                <name> de idade <age> pesa <weight> kg.
+                Atenção, substitua <name> <age> e <weight> pelos valores de cada propriedade do objeto
+        */
+
+        let Exstudent = {
+            name: "Mayk",
+            age: 34,
+            stars: 6.5,
+            weight: 30,
+            isSubscribed: true
+        };
+
+        console.log(typeof Exstudent)
+        
+        console.log(Exstudent)
+
+        console.log(`${Exstudent.name} de idade ${Exstudent.age} pesa ${Exstudent.weight} kg`)
+
+        /*
+            5. Declare uma variável do tipo array, de nome students e atribua a ela nenhum valore, ou seja, somente o array vazio
+        */
+
+        let student = []
+
+        /*
+            6.Reatribua o valor para a variável acima, colocando dentro dela o objeto student da questão 4. (Não copiar e colar o objeto, mas usar o objeto criado e inserir ele no Array)
+        */
+
+        student = [
+            Exstudent,            
+        ]
+
+        console.log(student)
+
+        /*
+            7. coloque no console o valor da posição zero do array acima
+        */
+
+        console.log(student[0])
+
+        /*
+            8. Crie um novo student e coloque na posição 1 do Array student
+        */
+
+        const john ={
+            name: "John",
+            age: 23,
+            weight: 74.8,
+            isSubscribed: true,
+        }
+
+        // reescrever novamente
+        student = [
+            Exstudent,
+            john
+        ]
+
+        // atribuir diretamente a opção 1 do array
+        student[1] = john
+        
+        console.log(student)
+
+        /*
+            9. Sem rodar o código responda qual é a resposta do código abaixo e por que? Após sua resposta, rode o código e veja se você acertou.
+        */
+
+         //retorna undefined pois a variavel 'a' ainda não teve um valor atribuido porém é criado o Hoisting e o JS sabe que ela existe mas ainda não foi encontrado valor definido já que o Js lê o código de cima pra baixo
+         console.log(a)
+         var a=1         
+
+    </script>
+</body>
+</html>
