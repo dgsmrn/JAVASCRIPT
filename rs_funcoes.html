@@ -47,6 +47,7 @@
         console.log(`o número 1 é ${number1}`)
         console.log(`o número 2 é ${number2}`)
         console.log(`a soma é ${sum(number1, number2)}`) //a função executa prmeiro o console.log dela e então o valor dessa linha fica undefined
+
         console.log(`a soma é ${sum2(number1, number2)}`) //neste caso com o return o resultado é outro
         console.log(`a soma é ${sum3(number1, number2)}`) //neste caso com o return o resultado é outro
 
@@ -62,6 +63,7 @@
         const copo = fazerSuco('banana', 'maçã')
         console.log(copo)
 
+        /*
         // function scope
         let subject = 'create video'
 
@@ -70,14 +72,71 @@
             return subject            
         }
 
-        
         console.log(createThink(subject))
+        
         console.log(subject)
+        createThink('teste')
 
+        
+        // function hoisting
+
+        sayMyName() //sofre elevação
+        //sayMyName2() não sofre elevação
+
+        function sayMyName(){
+            console.log('Mayk')
+        }
+        
+        var sayMyName2 = function (){ 
+            console.log('Mayk2')
+        }
+        
+        
+        // arrow function
+
+        const sayMyName3 = (name) => {
+            console.log(name)
+        }
+
+        sayMyName3('Douglas')
 
         
+        // callback function
+
+        function sayMyName5(nome){
+            console.log('antes de executar a funcao callback')            
+            nome()
+            console.log('depois de executar a callback')
+        }
+
+        sayMyName5(
+            () => {
+                console.log('estou em uma callback')
+            }
+        )
+
         
+        /* funções construtoras - function () constructor
+         expressão new
+         criar um novo objeto
+         this keyword
+         
         
+        function Person(name){
+            this.name = name
+            this.walk = function(){
+                return this.name + " está andando"
+            }
+        }
+        
+        const mayk = new Person("Mayk")
+        const joao = new Person("Joao")
+        
+        console.log(mayk.walk())
+        console.log(joao.walk())
+        
+        */
+       
     </script>
 </body>
 </html>
