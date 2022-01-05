@@ -8,6 +8,75 @@
 </head>
 <body>
     <script>
+        //Criar um aplicativo de frases motivacionais
+
+        //declaration - delacaração da função
+        //function statement
+        function createPhrases(){
+            console.log('Estudar é muito bom')
+            console.log('Paciência e persistência')
+            console.log('Revisão é Mãe do aprendizado')
+        }
+
+        //Executar a função, rodar, chamar, invocar, execute, run, call, invoke
+        createPhrases()
+        
+
+        //Função anonima ou function anonymous
+        // parâmetros (parameters)
+        const sum = function(number1, number2){
+            console.log(number1+number2)
+        }
+        
+        const sum2 = function(number1, number2){
+            total2 = number1+number2
+            return total2
+        }
+
+        const sum3 = function(number1, number2){
+            let total3 = number1+number2
+            return total3
+        }
+        
+        // executar
+        let number1 = 34
+        let number2 = 25
+        
+        sum(number1, number2) // arguments - argumentos
+        
+        console.log(`o número 1 é ${number1}`)
+        console.log(`o número 2 é ${number2}`)
+        console.log(`a soma é ${sum(number1, number2)}`) //a função executa prmeiro o console.log dela e então o valor dessa linha fica undefined
+        console.log(`a soma é ${sum2(number1, number2)}`) //neste caso com o return o resultado é outro
+        console.log(`a soma é ${sum3(number1, number2)}`) //neste caso com o return o resultado é outro
+
+        console.log(total2) //neste caso o total2 não foi declarado como let logo ele pode escapar do escopo, isso pode ser ruim
+        // console.log(total3) neste formato o total3 não existe fora do escopo
+
+        // Função é um liquidificador
+        
+        function fazerSuco(fruta1, fruta2){
+            return fruta1 + " " + fruta2
+        }
+
+        const copo = fazerSuco('banana', 'maçã')
+        console.log(copo)
+
+        // function scope
+        let subject = 'create video'
+
+        function createThink(subject) {
+            subject = 'study'
+            return subject            
+        }
+
+        
+        console.log(createThink(subject))
+        console.log(subject)
+
+
+        
+        
         
     </script>
 </body>
