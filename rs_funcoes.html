@@ -20,8 +20,9 @@
 
         //Executar a função, rodar, chamar, invocar, execute, run, call, invoke
         createPhrases()
+               
         
-
+        console.log('-----------------------------')
         //Função anonima ou function anonymous
         // parâmetros (parameters)
         const sum = function(number1, number2){
@@ -54,6 +55,7 @@
         console.log(total2) //neste caso o total2 não foi declarado como let logo ele pode escapar do escopo, isso pode ser ruim
         // console.log(total3) neste formato o total3 não existe fora do escopo
 
+        console.log('-----------------------------')
         // Função é um liquidificador
         
         function fazerSuco(fruta1, fruta2){
@@ -62,45 +64,47 @@
 
         const copo = fazerSuco('banana', 'maçã')
         console.log(copo)
-
-        /*
+        
+        console.log('-----------------------------')
         // function scope
         let subject = 'create video'
 
-        function createThink(subject) {
+        function createThink(subject) { //se houver o parametro subject a função atualiza somente parametro de fora pra study, agora se tirar este parametro, a função irá de fato atualizar a variavel que esta fora do escopo
             subject = 'study'
             return subject            
         }
 
         console.log(createThink(subject))
         
-        console.log(subject)
-        createThink('teste')
+        console.log(subject) // aqui é apresentado 'create video' caso retirar o parametro subject dentro da funcao, a variavel de fora será alterada para study
 
+        console.log(createThink('teste')) //independente do valor passado a função ira atualizar para study
         
+        
+        console.log('-----------------------------')
         // function hoisting
 
         sayMyName() //sofre elevação
-        //sayMyName2() não sofre elevação
+        // sayMyName2() //não sofre elevação quando é criada uma função anonima (funcao atribuida a uma variavel)
 
         function sayMyName(){
-            console.log('Mayk')
+            console.log('Mayk elevado')
         }
         
         var sayMyName2 = function (){ 
             console.log('Mayk2')
         }
         
-        
-        // arrow function
+        console.log('-----------------------------')
+        // arrow function / funciona em função anonima do tipo expression
 
         const sayMyName3 = (name) => {
             console.log(name)
         }
 
-        sayMyName3('Douglas')
+        sayMyName3('arrow function')
 
-        
+        console.log('-----------------------------')
         // callback function
 
         function sayMyName5(nome){
@@ -115,12 +119,12 @@
             }
         )
 
-        
+        console.log('-----------------------------')
         /* funções construtoras - function () constructor
          expressão new
          criar um novo objeto
          this keyword
-         
+         */
         
         function Person(name){
             this.name = name
@@ -135,7 +139,7 @@
         console.log(mayk.walk())
         console.log(joao.walk())
         
-        */
+        
        
     </script>
 </body>
