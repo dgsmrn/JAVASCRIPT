@@ -107,15 +107,15 @@
         console.log('-----------------------------')
         // callback function
 
-        function sayMyName5(nome){
+        function sayMyName5(nome){ //recebe uma função como parametro
             console.log('antes de executar a funcao callback')            
-            nome()
+            nome() // é colocado () para executar a função recebida por parametro
             console.log('depois de executar a callback')
         }
 
         sayMyName5(
             () => {
-                console.log('estou em uma callback')
+                console.log('estou em uma callback') //uma função como parametro
             }
         )
 
@@ -133,14 +133,12 @@
             }
         }
         
-        const mayk = new Person("Mayk")
+        const mayk = new Person("Mayk") //cria um objeto
         const joao = new Person("Joao")
         
         console.log(mayk.walk())
         console.log(joao.walk())
         
-        
-       
     </script>
 </body>
 </html>
