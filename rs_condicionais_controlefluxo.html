@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Control flow
+
+        console.log('a')
+        console.log('b')
+
+        // if...else
+
+        let temperature = 37
+
+        if (temperature >= 37.5) {
+            console.log('Frebre alta')
+        } else if (temperature < 37.5 && temperature >= 37) {
+            console.log('Febre moderada')
+        } else {
+            console.log('Saudável')
+        }
+
+        // switch
+
+        let expression = 'a'
+
+        switch(expression){
+            case'a':
+            console.log('a')
+            break
+            case 'b':
+            console.log('b')
+            break
+            default:
+            console.log('default')
+            break
+        }
+
+        
+        function calculate(number1, operator, number2) {
+            let result = 0
+
+            switch (operator) {
+                case '+':
+                    result = number1 + number2
+                    break
+                case '-':
+                    result = number1 - number2    
+                    break
+                case '*':
+                    result = number1 * number2
+                    break
+                case '/':
+                    result = number1 / number2    
+                    break            
+                default:
+                    console.log('não implementado')
+                    break;
+            }
+            return result    
+        }
+        
+        console.log(calculate(4, '+', 8))
+        console.log('-------------------------------------------')
+        
+        // Tratamento de erros
+        //throw (disparar)
+
+        function sayMyName(name='') {
+            if(name===''){
+                throw new Error("Nome é necessário")                
+            }
+            console.log(name)
+        }
+
+        //try...catch (tentar, pegar)
+        try{
+            sayMyName('Mayk')
+        } catch(e){
+            console.log(e)
+        }
+        
+    </script>
+</body>
+
+</html>
